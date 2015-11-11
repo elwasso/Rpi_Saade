@@ -1,0 +1,30 @@
+button{
+	outline:none !important;
+}
+
+#electstatus{
+	position: absolute;
+	right:1em;
+	top:1em;
+}
+
+#electstatus .item{
+	display: block;
+	text-align: center;
+	float: left;
+}
+
+#electstatus .item img{
+	display: block;
+	margin:auto;
+	display: none;
+}
+
+#electstatus .item.off .off{
+	display: block;
+}
+
+
+#electstatus .item.on .on{
+	display: block;
+}
