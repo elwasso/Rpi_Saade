@@ -39,9 +39,6 @@ for pn in ip:
 pEDL=GPIO.input(EDL)
 pGST=GPIO.input(GST)
 
-#Send an email to mark a restart
-SendmeEmail("Raspberry Pi just Started")
-
 #This code assumes the pririty is for EDL
 
 def SendmeEmail(Src):
@@ -63,6 +60,10 @@ def SendmeEmail(Src):
 	s.login(smtpUser, smtpPass)
 	s.sendmail(fromAdd, toAdd, header + '\n\n')
 	s.quit()
+
+#Send an email to mark a restart
+SendmeEmail("Raspberry Pi just Started")
+
 
 def TurnOutputsOff():
 	for pn in op:
