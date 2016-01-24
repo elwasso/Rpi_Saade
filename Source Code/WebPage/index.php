@@ -43,7 +43,7 @@
 								<section class="box ">
 									<div class="row">
 										<div class="12u">
-										<h2>Current Status</h2>
+										<h2>Current Status (Toggles the Status in Real time)</h2>
 
 										<h5>Electric Heater</h5>
 											<a href="javascript:void(0)" class="button" data-method="5" data-status="1">On</a>
