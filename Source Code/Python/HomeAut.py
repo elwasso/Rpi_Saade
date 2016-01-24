@@ -168,7 +168,12 @@ def genCallback(sEDL, sGST):
 		if not sGST :
 			txt_2="GST is now OFF"
 		elif sGST :
-			txt_2="GST is now ON"
+			ii=ReadStatus(6)
+			GPIO.output(6,1-ii)
+			if ii == 1:
+				txt_2="GST is now ON, Diesel Generator is ON"
+			else:
+				txt_2="GST in now ON"
 		pGST = sGST
 		if stat == " " :
 			stat=" 000"

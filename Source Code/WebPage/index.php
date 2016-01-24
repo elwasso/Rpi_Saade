@@ -64,7 +64,7 @@
 								<section class="box">
 									<div class="row">
 										<div class="12u">
-										<h2>On EDL</h2>
+										<h2>On EDL (Diesel Heater will work also on Generator)</h2>
 										<h5>Electric Heater</h5>
 											<a href="javascript:void(0)" class="button preset" data-method="5" data-status="">Keep Off</a>
 										</div>	
