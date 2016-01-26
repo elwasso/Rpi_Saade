@@ -171,7 +171,7 @@ def genCallback(sEDL, sGST):
 			ii=ReadStatus(6)
 			GPIO.output(6,1-ii)
 			if ii == 1:
-				txt_2="GST is now ON, Diesel Generator is ON"
+				txt_2="GST is now ON, Diesel Heater is ON"
 			else:
 				txt_2="GST in now ON"
 		pGST = sGST
@@ -208,73 +208,3 @@ while 1:
 
 	except KeyboardInterrupt:
 		GPIO.cleanup()
-
-# print("Entered loop " + str(channel) +" "+ str(GPIO.input(channel)))
-# 	pressed = 1
-# 	pressedOK = 0
-# 	counter = 0
-
-# 	while ( pressed == 1 ):
-# 		if ( GPIO.input(channel) == True ):
-# 			# button is still pressed
-# 			counter = counter + 1
-
-# 			# break if we count beyond 10
-# 			if (counter >= 20):
-# 				pressed = 0
-# 				pressedOK = 1
-# 			else:
-# 				sleep(0.05)
-# 		else:
-# 			# button has been released
-# 			pressed = 0
-
-# 	if pressedOK == 1:
-# 		#If this is the first trigger, save the current status to the files
-# 		if firstRun:
-# 			for pn in op:
-# 				f = open ("/var/www/Raspberry/txtFiles/st" + str(pn) + ".txt","w")
-# 				a = GPIO.input(pn)
-# 				f.write(str(a))
-# 				f.close()
-# 		firstRun = False
-
-# 	if channel == EDL:
-
-# 		if GPIO.input(EDL):
-# 			if GPIO.input(GST):
-# 				print 'a, do nothing'
-# 			elif not GPIO.input(GST):
-# 				TurnOutputsOn()
-# 				print 'b, turn them back on'
-# 			#SendmeEmail("ELD is ON")	
-
-# 		elif not GPIO.input(EDL):
-# 			if GPIO.input(GST):
-# 				print 'c, do nothing'
-# 			elif not GPIO.input(GST):
-# 				print 'd, save and turn them off'
-# 				for pn in op:
-# 					SaveStatus(pn)
-# 				TurnOutputsOff()
-# 			#SendmeEmail("EDL is OFF")
-
-# 	elif channel == GST:
-# 		if GPIO.input(GST):
-# 			if GPIO.input(EDL):
-# 				print 'e, save and turn them off'
-# 				for pn in op:
-# 					SaveStatus(pn)
-# 				TurnOutputsOff()
-# 			elif not GPIO.input(EDL):
-# 				print 'f, do nothing'
-# 			#SendmeEmail("GenSet is ON")
-
-# 		elif not GPIO.input(GST):
-# 			if GPIO.input(EDL):
-# 				TurnOutputsOn()
-# 				print 'g, Turn them back on'
-				
-# 			elif not GPIO.input(EDL):
-# 				print 'h, do nothing'
-# 			#SendmeEmail("GenSet is OFF")
